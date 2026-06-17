@@ -1,0 +1,4 @@
+fields @timestamp, log_datos.mensaje, log_datos.pelicula.tenant_id, log_datos.pelicula.pelicula_datos.nombre
+| filter tipo = "INFO"
+| sort @timestamp desc
+| limit 20
