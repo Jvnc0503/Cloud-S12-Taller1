@@ -1,0 +1,4 @@
+fields @timestamp, log_datos.error_tipo, log_datos.error_mensaje, log_datos.evento_origen.body.tenant_id
+| filter tipo = "ERROR"
+| sort @timestamp desc
+| limit 50
